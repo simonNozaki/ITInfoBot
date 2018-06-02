@@ -34,7 +34,7 @@ function setTargetEmail() {
 /********************************************************************
 * ここから、連番のデータ作成関数です.
 *********************************************************************/
-// シートの番号、列番号、生成したい件数、１つ目のオブジェクトを引数に、取引IDを連番で生成します.
+// シートの番号、列番号、生成したい件数、１つ目のオブジェクトを引数に、連番で生成します.
 // columnのみ文字列、他は整数値(int)で渡します.
 function autoincrementFunction(sheetNum, column, defVal, size, firstObj) {
   for (var i = defVal;i<size;i++){
@@ -43,5 +43,4 @@ function autoincrementFunction(sheetNum, column, defVal, size, firstObj) {
 }
 
 // 使用例です.
-// 最後の引数に、取引IDや請求金額を入れることで、汎用的にテストデータを作成できます.
 autoincrementFunction(1, "D", 0, 5000, 18040500000);
